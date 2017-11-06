@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .cph1
+        {
+           position:absolute;
+           top:200px;
+           left:600px;
+        }
+        .l1
+        {
+            top:10px;
+            position:absolute;
+            left:650px;
+        }
+        .i1{
+            position:absolute;
+            left:50px;
+        }
+        .l2
+        {
+            top:40px;
+            position:absolute;
+            left:610px;
+        }
+        .l3
+        {
+            top:80px;
+            position:absolute;
+            left:590px;
+        }
+        .header
+        {
+            position:absolute;
+            left:330px;
+        }
+        .footer
+        {
+            position:absolute;
+            background-color:black;
+            height:110px;
+            right:0px;
+            width:1400px;
+            bottom:0px;
+            color:white;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+        <asp:Image ID="top_logo" runat="server" ImageUrl="rest_logo.png" Height="75px" Width="600px" />
+        </div>
+            <div class="cph1">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        <div class="footer" runat="server">
+            <asp:Image runat="server" CssClass="i1" ImageUrl="foot_logo.jpg" Height="100px" Width="130px" />
+            <asp:Label runat="server" CssClass="l1" ID="mp_l1" Height="30px">Contact:9343123123</asp:Label>
+            <asp:Label runat="server" CssClass="l2" ID="mp_l2" Height="30px">Address: End Point Road,Manipal</asp:Label>
+            <asp:Label runat="server" CssClass="l3" ID="Label1" Height="30px">FREE HOME DELIVERY AVAILABLE</asp:Label>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
